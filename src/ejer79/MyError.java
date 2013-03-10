@@ -6,9 +6,11 @@ package ejer79;
 
 /**
  *
- * @author Alumno
+ * @author Luis Pitarch
+ * @version 1
  */
 public class MyError extends Exception{
+    // Se ejecuta el constructor con el mensaje
     MyError() {
          Pantalla.imprime("Has puesto letras");
     }

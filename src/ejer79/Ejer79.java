@@ -8,7 +8,8 @@ import java.io.IOException;
 
 /**
  *
- * @author Alumno
+ * @author Luis Pitarch
+ * @version 1
  */
 public class Ejer79 {
 
@@ -24,10 +25,10 @@ public class Ejer79 {
         String habitacion;
         boolean bien;
         System.out.println("Este es un mensaje de prueba");
-        do{
+        do{ 
             bien=true;
             habitacion=Pantalla.pideCadena("Introduce el nº de la habitacion: ");
-            if (habitacion.length()!=3){
+            if (habitacion.length()!=3){// Comprueba que el nº de habitacion tenga 3 digitos
                 bien=false;
                 if (habitacion.length()<3){
                     Pantalla.imprime("Debes introducir más numeros");
@@ -37,8 +38,8 @@ public class Ejer79 {
                 }
             }
             
-            for(int e=0;e<habitacion.length();e++){
-                try {  
+            for(int e=0;e<habitacion.length();e++){ 
+                try {  // Comprueba que el número es correcto llamando al método validar
                     if(validar(habitacion.charAt(e))!=1){
                         bien=false;
                     }
@@ -72,6 +73,13 @@ public class Ejer79 {
             Pantalla.imprime("Nº habitacion OK: ");
         }
     }
+    /**
+     * 
+     * @param c Evalúa el caracter introducido
+     * @return devuelve un 1 si el valor introducido es numérico
+     * @throws MyError 
+     */
+      
     public static int validar(char c) throws MyError {
         
          if (c>='0'&&c<='9'){
