@@ -23,7 +23,7 @@ public class Ejer79 {
          */
         String habitacion;
         boolean bien;
-        
+        System.out.println("Este es un mensaje de prueba");
         do{
             bien=true;
             habitacion=Pantalla.pideCadena("Introduce el nº de la habitacion: ");
